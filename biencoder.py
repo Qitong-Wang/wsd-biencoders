@@ -42,9 +42,9 @@ parser.add_argument('--context-bsz', type=int, default=4)
 parser.add_argument('--gloss-bsz', type=int, default=256)
 parser.add_argument('--encoder-name', type=str, default='bert-base',
 	choices=['bert-base', 'bert-large', 'roberta-base', 'roberta-large'])
-parser.add_argument('--ckpt', type=str, required=True,
+parser.add_argument('--ckpt', type=str, default = "./ckpt",
 	help='filepath at which to save best probing model (on dev set)')
-parser.add_argument('--data-path', type=str, required=True,
+parser.add_argument('--data-path', type=str,  default="./WSD_Evaluation_Framework/",
 	help='Location of top-level directory for the Unified WSD Framework')
 
 #sets which parts of the model to freeze ❄️ during training for ablation 
